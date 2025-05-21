@@ -57,7 +57,3 @@ class Collector():
 
         for i in pokedex_ranges:
             data = self.get_and_save(offset=i[0]-1, limit=i[1]-i[0]+1)
-
-# %%
-collector = Collector("https://pokeapi.co/api/v2/pokemon", "pokemon")
-collector.auto_exec()

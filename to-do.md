@@ -1,2 +1,0 @@
-- Corrigir bug no resident-evil/collect.py onde um personagem não está sendo obtido
-- Corrigir bug no resident-evil/collect.py no método get_basic_info() para um personagem

@@ -69,8 +69,3 @@ class Processor():
         if __name__ == '__main__':
             with Pool(num_processes) as p:
                 p.map(self.collector.get_and_save, self.df['url'])
-# %%
-collector = Collector("pokemon_details")
-processor = Processor('./data/pokemon/json/', collector)
-processor.build_dataframe()
-processor.run_multiprocessing()
