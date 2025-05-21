@@ -51,9 +51,6 @@ class Collector():
 
                 date = pd.to_datetime(data[-1]['updated_at']).date()
                 
-                print(f"{date}{date_stop}")
-                print(date < date_stop)
-                print(len(data))
 
                 if len(data) < kwargs.get('per_page', 100) or date < date_stop:
                     print("Última página")
