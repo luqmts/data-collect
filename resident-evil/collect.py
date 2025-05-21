@@ -29,11 +29,12 @@ class Collector():
         data = {}
         ems = (soup
             .find("div", class_="td-page-content")
-            .find_all("p")[1]
-            .find_all("em"))
+            .find("h4")
+            .find_previous_sibling().text
+        ).split('\n')
 
         for i in ems:
-            chave, valor, *_ = i.text.split(":")
+            chave, valor = i.split(":")
             chave = chave.strip(" ")
             data[chave] = valor.strip(" ")
 
